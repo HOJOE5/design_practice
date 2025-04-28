@@ -10,7 +10,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('앱 제목')),
+        appBar: AppBar(
+          backgroundColor: Colors.deepPurple,
+          centerTitle: true,
+          title: Text(
+            '앱 제목',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          elevation: 10, // 그림자 깊이
+          actions: [IconButton(icon: Icon(Icons.settings), onPressed: () {})],
+        ),
+
         body: Column(
           children: [
             SizedBox(height: 20), // 위에 간격
